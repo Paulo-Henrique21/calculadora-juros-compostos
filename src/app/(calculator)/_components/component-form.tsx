@@ -120,8 +120,8 @@ export function ComponentForm({
                   className="w-full"
                 >
                   <Group className="relative inline-flex h-9 w-full items-center overflow-hidden whitespace-nowrap rounded-lg border border-input text-sm shadow-sm shadow-black/5">
-                    <AriaInput className="flex-1 bg-background px-3 py-2 tabular-nums text-foreground focus:outline-none" />
-                    <div className="flex h-[calc(100%+2px)] flex-col">
+                    <AriaInput className="w-auto bg-background px-3 py-2 tabular-nums text-foreground focus:outline-none" />
+                    <div className="flex h-[calc(100%+2px)] flex-col ml-auto">
                       <AriaButton
                         slot="increment"
                         className="-me-px flex h-1/2 w-6 flex-1 items-center justify-center border border-input bg-background"
@@ -168,8 +168,8 @@ export function ComponentForm({
                   className="w-full"
                 >
                   <Group className="relative inline-flex h-9 w-full items-center overflow-hidden whitespace-nowrap rounded-lg border border-input text-sm shadow-sm shadow-black/5">
-                    <AriaInput className="flex-1 bg-background px-3 py-2 tabular-nums text-foreground focus:outline-none" />
-                    <div className="flex h-[calc(100%+2px)] flex-col">
+                    <AriaInput className="w-auto bg-background px-3 py-2 tabular-nums text-foreground focus:outline-none" />
+                    <div className="flex h-[calc(100%+2px)] flex-col ml-auto">
                       <AriaButton
                         slot="increment"
                         className="-me-px flex h-1/2 w-6 flex-1 items-center justify-center border border-input bg-background"
@@ -211,9 +211,9 @@ export function ComponentForm({
                     onChange={(value) => field.onChange(value)}
                     className="w-full"
                   >
-                    <Group className="relative inline-flex h-9 w-full items-center overflow-hidden whitespace-nowrap rounded-lg border border-input text-sm shadow-sm shadow-black/5">
-                      <AriaInput className="flex-1 bg-background px-3 py-2 tabular-nums text-foreground focus:outline-none" />
-                      <div className="flex h-[calc(100%+2px)] flex-col">
+                   <Group className="relative inline-flex h-9 w-full items-center overflow-hidden whitespace-nowrap rounded-lg border border-input text-sm shadow-sm shadow-black/5">
+                    <AriaInput className="w-auto bg-background px-3 py-2 tabular-nums text-foreground focus:outline-none" />
+                    <div className="flex h-[calc(100%+2px)] flex-col ml-auto">
                         <AriaButton
                           slot="increment"
                           className="-me-px flex h-1/2 w-6 flex-1 items-center justify-center border border-input bg-background"
@@ -280,8 +280,8 @@ export function ComponentForm({
                     className="w-full"
                   >
                     <Group className="relative inline-flex h-9 w-full items-center overflow-hidden whitespace-nowrap rounded-lg border border-input text-sm shadow-sm shadow-black/5">
-                      <AriaInput className="flex-1 bg-background px-3 py-2 tabular-nums text-foreground focus:outline-none" />
-                      <div className="flex h-[calc(100%+2px)] flex-col">
+                    <AriaInput className="w-auto bg-background px-3 py-2 tabular-nums text-foreground focus:outline-none" />
+                    <div className="flex h-[calc(100%+2px)] flex-col ml-auto">
                         <AriaButton
                           slot="increment"
                           className="-me-px flex h-1/2 w-6 flex-1 items-center justify-center border border-input bg-background"
