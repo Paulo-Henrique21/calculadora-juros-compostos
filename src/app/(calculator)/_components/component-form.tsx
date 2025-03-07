@@ -96,7 +96,7 @@ export function ComponentForm({
     setData(response);
     setIsLoadingData(false);
   }
-/* teste */
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6">
