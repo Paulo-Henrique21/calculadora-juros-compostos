@@ -35,7 +35,6 @@ export default function CompoundInterestPage() {
   const [data, setData] = useState<CalculationOutput>();
   const [isLoadingData, setIsLoadingData] = useState(false);
 
-  // Função para exportar os dados para um arquivo Excel
   const exportToExcel = () => {
     if (!data) return;
 
@@ -43,14 +42,12 @@ export default function CompoundInterestPage() {
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, "Juros Compostos");
 
-    // Define os cabeçalhos das colunas manualmente para manter a ordem correta
     XLSX.utils.sheet_add_aoa(
       worksheet,
       [["Mês", "Juros", "Total Investido", "Total Juros", "Total Acumulado"]],
       { origin: "A1" }
     );
 
-    // Salva o arquivo Excel
     XLSX.writeFile(workbook, "juros_compostos.xlsx");
   };
 
@@ -79,7 +76,7 @@ export default function CompoundInterestPage() {
                 </div>
               ) : (
                 <div>
-                  {data ? (
+                  {data && (
                     <div className="space-y-4">
                       <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-4">
                         <Card>
@@ -156,7 +153,7 @@ export default function CompoundInterestPage() {
                               <Chart data={data} />
                             </TabsContent>
                             <TabsContent value="tab-2" className="min-h-96">
-                              <div className="[&>div]:max-h-96">
+                              <div className="[&>div]:max-h-96 max-w-full">
                                 <DataTable data={data} />
                               </div>
                             </TabsContent>
@@ -164,8 +161,6 @@ export default function CompoundInterestPage() {
                         </CardContent>
                       </Card>
                     </div>
-                  ) : (
-                    <></>
                   )}
                 </div>
               )}

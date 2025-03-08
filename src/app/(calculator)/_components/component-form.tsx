@@ -28,7 +28,6 @@ import {
 } from "@/components/ui/select";
 import { calculate } from "../calculate";
 
-// Esquema de validação atualizado
 const FormSchema = z.object({
   initialValue: z.number().min(0, {
     message: "Initial value must be a positive number.",
@@ -101,7 +100,6 @@ export function ComponentForm({
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6">
         <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4">
-          {/* Valor Inicial */}
           <FormField
             control={form.control}
             name="initialValue"
@@ -149,7 +147,6 @@ export function ComponentForm({
             )}
           />
 
-          {/* Valor Mensal */}
           <FormField
             control={form.control}
             name="monthlyValue"
@@ -197,7 +194,6 @@ export function ComponentForm({
             )}
           />
 
-          {/* Taxa de Juros + Tipo */}
           <div className="grid grid-cols-3 gap-2">
             <FormField
               control={form.control}
@@ -211,9 +207,9 @@ export function ComponentForm({
                     onChange={(value) => field.onChange(value)}
                     className="w-full"
                   >
-                   <Group className="relative inline-flex h-9 w-full items-center overflow-hidden whitespace-nowrap rounded-lg border border-input text-sm shadow-sm shadow-black/5">
-                    <AriaInput className="w-auto bg-background px-3 py-2 tabular-nums text-foreground focus:outline-none" />
-                    <div className="flex h-[calc(100%+2px)] flex-col ml-auto">
+                    <Group className="relative inline-flex h-9 w-full items-center overflow-hidden whitespace-nowrap rounded-lg border border-input text-sm shadow-sm shadow-black/5">
+                      <AriaInput className="w-auto bg-background px-3 py-2 tabular-nums text-foreground focus:outline-none" />
+                      <div className="flex h-[calc(100%+2px)] flex-col ml-auto">
                         <AriaButton
                           slot="increment"
                           className="-me-px flex h-1/2 w-6 flex-1 items-center justify-center border border-input bg-background"
@@ -265,7 +261,6 @@ export function ComponentForm({
             />
           </div>
 
-          {/* Período + Tipo */}
           <div className="grid grid-cols-3 gap-2">
             <FormField
               control={form.control}
@@ -280,8 +275,8 @@ export function ComponentForm({
                     className="w-full"
                   >
                     <Group className="relative inline-flex h-9 w-full items-center overflow-hidden whitespace-nowrap rounded-lg border border-input text-sm shadow-sm shadow-black/5">
-                    <AriaInput className="w-auto bg-background px-3 py-2 tabular-nums text-foreground focus:outline-none" />
-                    <div className="flex h-[calc(100%+2px)] flex-col ml-auto">
+                      <AriaInput className="w-auto bg-background px-3 py-2 tabular-nums text-foreground focus:outline-none" />
+                      <div className="flex h-[calc(100%+2px)] flex-col ml-auto">
                         <AriaButton
                           slot="increment"
                           className="-me-px flex h-1/2 w-6 flex-1 items-center justify-center border border-input bg-background"

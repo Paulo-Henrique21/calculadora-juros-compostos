@@ -18,9 +18,9 @@ export function Navbar({ children }: { children: ReactNode }) {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 md:justify-center items-center px-4">
-          <div className="hidden md:flex w-full max-w-5xl items-center">
+      <header className="sticky flex justify-center top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container flex h-16 md:justify-center items-center mx-4 max-w-5xl">
+          <div className="hidden md:flex w-full items-center">
             <nav>
               <ul className="flex items-center space-x-6 text-sm font-medium">
                 {menuItems.map((item) => (
@@ -39,9 +39,6 @@ export function Navbar({ children }: { children: ReactNode }) {
                 ))}
               </ul>
             </nav>
-            <div className="ml-auto">
-              <ModeToggle />
-            </div>
           </div>
           <Sheet>
             <SheetTrigger asChild>
@@ -71,6 +68,9 @@ export function Navbar({ children }: { children: ReactNode }) {
               </nav>
             </SheetContent>
           </Sheet>
+          <div className="ml-auto">
+            <ModeToggle />
+          </div>
         </div>
       </header>
       <main className="flex-1 p-4">{children}</main>

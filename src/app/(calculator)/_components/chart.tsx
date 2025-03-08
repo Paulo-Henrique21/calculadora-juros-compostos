@@ -60,7 +60,6 @@ export function Chart({ data }: { data: CalculationOutput }) {
       style: {
         fontFamily: "Inter",
         fontSize: "12px",
-        // color: fullConfig.muted.foreground,
       },
       backgroundColor: fullConfig.background,
     },
@@ -164,7 +163,6 @@ export function Chart({ data }: { data: CalculationOutput }) {
             `;
         });
 
-        // Pegando o total acumulado do mesmo índice que o tooltip está mostrando
         const totalAcumulado = formatCurrency(
           parseCurrency(data.results[this.x].totalAccumulated)
         );
@@ -192,11 +190,6 @@ export function Chart({ data }: { data: CalculationOutput }) {
         data: investedData,
         color: fullConfig.primary.DEFAULT,
       },
-      // {
-      //   name: "Total Acumulado",
-      //   data: accumulatedData,
-      //   color: fullConfig.blue[800],
-      // },
     ],
   };
 
